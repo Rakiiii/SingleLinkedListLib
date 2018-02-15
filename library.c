@@ -160,3 +160,123 @@ void Single_List_push_back ( Single_List_t *St , Bus_t data )
     St->tail = node;
     St->size++;
 }
+
+/*
+ * функция получения n-го элемента
+ */
+
+Single_List_Node_t * Single_List_get_prevlast ( Single_List_t *St )
+{
+    Single_List_Node_t *node ;
+     node = St->head ;
+
+    if ( node->adress == NULL ) return NULL ;
+
+    while ( node->adress->adress ) node = node->adress ;
+
+    return node ;
+}
+
+/*
+ * функция получения последнего элемента
+ */
+
+Bus_t * Single_List_pop_back ( Single_List_t *St )
+{
+
+    /*
+     * создаем указатель на необходимый узел
+     */
+
+    Single_List_Node_t * node ;
+    node = St->tail ;
+
+    /*
+     * создаем указатель на возвращаемое значение
+     */
+
+    Bus_t *value ;
+    value = node->value ;
+
+    /*
+     *получаем предпоследний элемент
+     * делаем его последним
+     */
+
+    Single_List_Node_t *prevlast ;
+    prevlast = Single_List_get_prevlast( St ) ;
+    prevlast->adress = NULL ;
+    St->tail = prevlast ;
+
+    /*
+     * освобождаем место занимаемое последним элементом
+     * дискрементируем размер массива
+     * возвращаем значение
+     */
+
+    free ( node ) ;
+
+    St->size -- ;
+
+    return value ;
+}
+
+/*
+ * функция добавление элемента на n-ое место
+ */
+
+void Single_List_push_nth ( Single_List_t *St , int position , Bus_t data )
+{
+    /*
+     * создаем указатель на новый элемент
+     * создаем счетчик
+     * создаем укащатель на для движения по списку
+     */
+
+    Single_List_Node_t *node ;
+    int i = 0 ;
+    Single_List_Node_t *snode ;
+    snode = St->head ;
+
+    /*
+     * идем до нужного элемента
+     */
+
+    while ( i < position && snode->adress )
+    {
+        snode = snode->adress ;
+        i ++ ;
+    }
+
+    /*
+     * выделяем место под новый элемент списка
+     * передвем новому элементу необходимое значение
+     */
+
+    node = ( Single_List_Node_t * )malloc( sizeof( Single_List_Node_t ) ) ;
+    node->value = data ;
+
+    /*
+     * если элемент не последний то добовляем адрес следующего элемента
+     * если последний меняем адрес последнего на адрес нового элемента списка
+     */
+
+    if ( snode->adress ) node->adress = snode->adress ;
+    else
+    {
+        node->adress = NULL ;
+        St->tail = node ;
+    }
+
+    /*
+     * меняем адрес следующего элемента у предшествующего
+     * инкрементируем размер списка
+     */
+
+    snode->adress = node ;
+    St->size ++ ;
+}
+
+/*
+ *
+ */
