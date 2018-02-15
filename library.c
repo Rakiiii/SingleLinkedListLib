@@ -43,7 +43,7 @@ Single_List_t * create_Single_List ( void )
  * добовлдяем функциию для добовления элемента в начало односвязного списка
  */
 
-void Single_List_push( Single_List_t *St , int data )
+void Single_List_push( Single_List_t *St , Bus_t data )
 {
     /*
      * выделяем памать под новый элемент списка
@@ -73,7 +73,7 @@ void Single_List_push( Single_List_t *St , int data )
  * добовляем функцию извлечения элемента из начала списка
  */
 
-int * Single_List_pop ( Single_List_t *St )
+Bus_t * Single_List_pop ( Single_List_t *St )
 {
     /*
      * проверяем размер списка
@@ -92,7 +92,7 @@ int * Single_List_pop ( Single_List_t *St )
      * извлекаем значение элемента по этому адресу
      */
 
-    int * value = node->value ;
+    Bus_t * value = node->value ;
 
     /*
      * уменьшаем размер списка
@@ -123,14 +123,14 @@ int * Single_List_pop ( Single_List_t *St )
      * Возвращаем значение извлеченного элемента
      */
 
-    return *value ;
+    return value ;
 }
 
 /*
  * добовляем функцию добовления элемента в конец списка
  */
 
-void Single_List_push_back ( Single_List_t *St , int data )
+void Single_List_push_back ( Single_List_t *St , Bus_t data )
 {
     /*
      * выделяем память под новый элемент

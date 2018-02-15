@@ -2,13 +2,25 @@
 #define SINGLELINKEDLISTLIB_LIBRARY_H
 
 /*
+ * структура описываюшая информацию об автобусах
+ */
+
+typedef  struct _Bus
+{
+    int bus_number ;
+    char bus_driver[32] ;
+    int bus_position ;
+    int road_number ;
+} Bus_t ;
+
+/*
  * Структура элементов односвязного спписка
  * обЪявляем новый тип , что б не писсать структуру каждый раз
  */
 
 typedef struct _Single_List_Node
 {
-    int value = 0 ;
+    Bus_t value = 0 ;
     struct _Single_List_Node *adress ;
 } Single_List_Node_t ;
 
@@ -44,10 +56,10 @@ typedef struct _Single_List
 
 Single_List_t * create_Single_List ( void );
 
-void Single_List_push( Single_List_t *St , int data );
+void Single_List_push( Single_List_t *St , Bus_t data );
 
-int * Single_List_pop ( Single_List_t *St );
+Bus_t * Single_List_pop ( Single_List_t *St );
 
-void Single_List_push_back ( Single_List_t *St , int data );
+void Single_List_push_back ( Single_List_t *St , Bus_t data );
 
 #endif
