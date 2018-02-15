@@ -1,0 +1,1 @@
+MinGW not found at: C:\Program Files (x86)\mingw-w64 Configure
