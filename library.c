@@ -278,5 +278,57 @@ void Single_List_push_nth ( Single_List_t *St , int position , Bus_t data )
 }
 
 /*
- *
+ *получение n-го элемента списка
  */
+
+Bus_t * Single_List_pop_nth ( Single_List_t *St , int position )
+{
+    /*
+     * создаем указатель для поискового узла
+     * создаем счетчик
+     * создаем указатель для возврата значения
+     */
+
+    Single_List_Node_t *node ;
+    node = St->head ;
+    int i = 0 ;
+    Bus_t *value ;
+
+    /*
+     * ищем позицию для извлечения
+     */
+
+    while ( i < position-1 && node->adress )
+    {
+        i ++ ;
+        node = node->adress ;
+    }
+
+    /*
+     * двигаем указатель предшествующего элемента
+     */
+
+    node->adress = node->adress->adress ;
+
+    /*
+     * проверяем не является ли удаляемый узел последним
+     */
+
+     if ( node->adress->adress == NUll ) St->tail = node ;
+
+    /*
+     * двигаемся на удаляемы узел
+     * передаем значени для возврата
+     */
+
+    node = node->adress ;
+    value = node->value ;
+
+    /*
+     * освобождаем место занимаемое узлом
+     * возвращаем значение
+     */
+
+    free( node ) ;
+    return value ;
+}

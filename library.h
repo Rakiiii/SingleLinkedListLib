@@ -66,4 +66,8 @@ Single_List_Node_t * Single_List_get_prevlast ( Single_List_t *St );
 
 Bus_t * Single_List_pop_back ( Single_List_t *St );
 
+void Single_List_push_nth ( Single_List_t *St , int position , Bus_t data );
+
+Bus_t * Single_List_pop_nth ( Single_List_t *St , int position );
+
 #endif

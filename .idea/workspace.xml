@@ -11,6 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="837aee62-8f00-45dd-8458-5d60ecdca573" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/library.c" afterPath="$PROJECT_DIR$/library.c" />
+      <change beforePath="$PROJECT_DIR$/library.h" afterPath="$PROJECT_DIR$/library.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,21 +34,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="library.c" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/library.c">
+      <file leaf-file-name="library.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1323">
-              <caret line="280" column="2" lean-forward="false" selection-start-line="280" selection-start-column="2" selection-end-line="280" selection-end-column="2" />
+            <state relative-caret-position="507">
+              <caret line="70" column="64" lean-forward="false" selection-start-line="70" selection-start-column="64" selection-end-line="70" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="library.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library.h">
+      <file leaf-file-name="library.c" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/library.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="66" column="51" lean-forward="false" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+            <state relative-caret-position="243">
+              <caret line="279" column="2" lean-forward="true" selection-start-line="279" selection-start-column="2" selection-end-line="279" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -60,8 +62,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/library.h" />
         <option value="$PROJECT_DIR$/library.c" />
+        <option value="$PROJECT_DIR$/library.h" />
       </list>
     </option>
   </component>
@@ -126,7 +128,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518724390694</updated>
-      <workItem from="1518724394088" duration="3188000" />
+      <workItem from="1518724394088" duration="3962000" />
     </task>
     <task id="LOCAL-00001" summary="+adapted for work with buses">
       <created>1518725387294</created>
@@ -142,11 +144,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518727587468</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="+add push n-th element&#10;+add pop back&#10;+add get prevlast element function">
+      <created>1518727629177</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1518727629177</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3188000" />
+    <option name="totallyTimeSpent" value="3962000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="-10" width="1940" height="1043" extended-state="6" />
@@ -180,7 +189,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="+adapted for work with buses" />
     <MESSAGE value="+add push n-th element&#10;+add push back" />
-    <option name="LAST_COMMIT_MESSAGE" value="+add push n-th element&#10;+add push back" />
+    <MESSAGE value="+add push n-th element&#10;+add pop back&#10;+add get prevlast element function" />
+    <option name="LAST_COMMIT_MESSAGE" value="+add push n-th element&#10;+add pop back&#10;+add get prevlast element function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -197,16 +207,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="66" column="51" lean-forward="false" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+        <state relative-caret-position="507">
+          <caret line="70" column="64" lean-forward="false" selection-start-line="70" selection-start-column="64" selection-end-line="70" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1323">
-          <caret line="280" column="2" lean-forward="false" selection-start-line="280" selection-start-column="2" selection-end-line="280" selection-end-column="2" />
+        <state relative-caret-position="243">
+          <caret line="279" column="2" lean-forward="true" selection-start-line="279" selection-start-column="2" selection-end-line="279" selection-end-column="2" />
           <folding />
         </state>
       </provider>
