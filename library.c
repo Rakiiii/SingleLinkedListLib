@@ -92,7 +92,8 @@ Bus_t * Single_List_pop ( Single_List_t *St )
      * извлекаем значение элемента по этому адресу
      */
 
-    Bus_t * value = node->value ;
+    Bus_t  *value = ( Bus_t * )malloc( sizeof( Bus_t ) ) ;
+    *value = node->value ;
 
     /*
      * уменьшаем размер списка
@@ -116,7 +117,7 @@ Bus_t * Single_List_pop ( Single_List_t *St )
     if ( St->size == 0)
     {
         St->head = NULL ;
-        St->tail = Null ;
+        St->tail = NULL ;
     }
 
     /*
@@ -195,10 +196,10 @@ Bus_t * Single_List_pop_back ( Single_List_t *St )
      * создаем указатель на возвращаемое значение
      */
 
-    Bus_t *value ;
-    value = node->value ;
+    Bus_t *value = ( Bus_t * )malloc( sizeof( Bus_t ) ) ;
+    *value = node->value ;
 
-    /*
+      /*
      *получаем предпоследний элемент
      * делаем его последним
      */
@@ -286,13 +287,13 @@ Bus_t * Single_List_pop_nth ( Single_List_t *St , int position )
     /*
      * создаем указатель для поискового узла
      * создаем счетчик
-     * создаем указатель для возврата значения
+     * создаем переменную для хранения возвращаемого значения
      */
 
     Single_List_Node_t *node ;
     node = St->head ;
     int i = 0 ;
-    Bus_t *value ;
+    Bus_t *value = ( Bus_t * )malloc( sizeof( Bus_t ) ) ;
 
     /*
      * ищем позицию для извлечения
@@ -314,7 +315,7 @@ Bus_t * Single_List_pop_nth ( Single_List_t *St , int position )
      * проверяем не является ли удаляемый узел последним
      */
 
-     if ( node->adress->adress == NUll ) St->tail = node ;
+     if ( node->adress->adress == NULL ) St->tail = node ;
 
     /*
      * двигаемся на удаляемы узел
@@ -322,7 +323,7 @@ Bus_t * Single_List_pop_nth ( Single_List_t *St , int position )
      */
 
     node = node->adress ;
-    value = node->value ;
+    *value = node->value ;
 
     /*
      * освобождаем место занимаемое узлом
